@@ -74,6 +74,8 @@ ms.lasthandoff: 05/16/2017
 
      使用 MQTT 連線時，此權杖中作為 [Password] 欄位的部分是︰`SharedAccessSignature sr={your hub name}.azure-devices.net%2Fdevices%2FMyDevice01%2Fapi-version%3D2016-11-14&sig=vSgHBMUG.....Ntg%3d&se=1456481802`。
 
+* (可選擇)在 [Path] 欄位中，如果是「透過 WebSocket 的 MQTT v3.1.1」連線，IE.11需要使用`/$iothub/websocket`，chrome與firefox則需使用`/$iothub/websocket?iothub-no-client-cert=true`，否則將無法連上。
+
 針對 MQTT 的連接和中斷連接封包，「IoT 中樞」會在「作業監視」通道發出事件，其中包含可協助您對連線問題進行疑難排解的額外資訊。
 
 ### <a name="sending-device-to-cloud-messages"></a>傳送裝置到雲端訊息
